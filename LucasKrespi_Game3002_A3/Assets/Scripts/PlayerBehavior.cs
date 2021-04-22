@@ -28,8 +28,8 @@ public class PlayerBehavior : MonoBehaviour
         m_PlayerRigidbody = GetComponent<Rigidbody>();
 
         //Inicialize Variables
-        m_groundLocomotionForce = 1.0f;
-        m_AirLocomotionForce = 0.5f;
+        m_groundLocomotionForce = 8.0f;
+        m_AirLocomotionForce = 2.0f;
         m_JumpForce = 200;
         m_isGrounded = false;
         m_hasKey = false;
