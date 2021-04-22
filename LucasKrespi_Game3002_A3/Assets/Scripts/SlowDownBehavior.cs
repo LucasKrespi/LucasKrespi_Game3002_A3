@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class SlowDownBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public class BoucePlataformBehavior : MonoBehaviour
-    {
-        // Start is called before the first frame update
+    // slow down the player after the bounce part
+   
     
-        private void OnTriggerEnter(Collider other)
-        {
-            other.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        }
+    private void OnTriggerEnter(Collider other)
+    {
+      other.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
+    
 }

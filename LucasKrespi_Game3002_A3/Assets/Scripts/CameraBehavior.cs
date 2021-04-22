@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CameraBehavior : MonoBehaviour
 {
     //Camera physics
@@ -26,12 +27,12 @@ public class CameraBehavior : MonoBehaviour
 
 
        m_MoveCameraForce = 100.0f;
-        m_SpringArmDist = -40.0f;
+       m_SpringArmDist = -40.0f;
     }
 
     void Update()
     {
-
+        //If the Player velocity you can see a little further up and down
         if (m_Player.velocity.magnitude == 0)
         {
             if (Input.GetKey(KeyCode.W))

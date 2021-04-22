@@ -18,6 +18,7 @@ public class PlayerBehavior : MonoBehaviour
 
     //Booleans
     public bool m_isGrounded;
+    private bool m_hasKey;
 
 
 
@@ -31,7 +32,7 @@ public class PlayerBehavior : MonoBehaviour
         m_AirLocomotionForce = 0.5f;
         m_JumpForce = 200;
         m_isGrounded = false;
-
+        m_hasKey = false;
     }
 
    
@@ -57,7 +58,7 @@ public class PlayerBehavior : MonoBehaviour
         }
         else
         {
-
+            //player move slower on air so it cant fly trough the obstacles
             if (Input.GetKey(KeyCode.A))
             {
                 m_PlayerRigidbody.AddForce(-m_AirLocomotionForce, 0.0f, 0.0f);
@@ -70,8 +71,18 @@ public class PlayerBehavior : MonoBehaviour
 
     }
 
+    //Reset Jump on collision so the player can climb walls
     private void OnCollisionEnter(Collision collision)
     {
         m_isGrounded = true;
+    }
+
+    public bool getHasKey()
+    {
+        return m_hasKey;
+    }
+    public void setHasKey(bool hasKey)
+    {
+        m_hasKey = hasKey;
     }
 }

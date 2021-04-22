@@ -57,11 +57,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerBehavior.cs" />
-    <Compile Include="Assets\Scripts\CameraBehavior.cs" />
-    <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\TrapBehavior.cs" />
-    <Compile Include="Assets\Scripts\BoucePlataformBehavior.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\SlowDownBehavior.cs" />
+    <Compile Include="Assets\Scripts\CameraBehavior.cs" />
+    <Compile Include="Assets\Scripts\BoucePlataformBehavior.cs" />
+    <Compile Include="Assets\Scripts\KeyBehavior.cs" />
+    <Compile Include="Assets\Scripts\DoorBehavior.cs" />
+    <Compile Include="Assets\Scripts\GM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

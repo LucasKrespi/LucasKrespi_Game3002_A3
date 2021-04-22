@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
@@ -25,5 +26,23 @@ public class Timer : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
 
         m_TimerText.text = currentTime.ToString("0");
+
+        if(currentTime <= 60 && currentTime > 30)
+        {
+            m_TimerText.color = Color.yellow;
+        }
+        else if(currentTime <= 30)
+        {
+            m_TimerText.color = Color.red;
+        }
+        else
+        {
+            m_TimerText.color = Color.green;
+        }
+
+        if(currentTime <= 0)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 }

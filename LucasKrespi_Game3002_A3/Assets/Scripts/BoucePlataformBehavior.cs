@@ -12,6 +12,8 @@ public class BoucePlataformBehavior : MonoBehaviour
     {
         m_OnTriggerForce = new Vector3(300.0f, 300.0f, 0.0f);
     }
+
+    //Trow the player in the bounce part of the game
     private void OnTriggerEnter(Collider other)
     {
         other.GetComponent<Rigidbody>().AddForce(m_OnTriggerForce);
